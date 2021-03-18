@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{962B5A3C-5598-4151-AC32-EE31635EE3BC}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Pong_Plus/MDTBCollisionSystem/Collision.cs">
+    <Files>
+      <File FileName="Pong_Plus/Game1.cs" Line="13" Column="22" />
+      <File FileName="Pong_Plus/Program.cs" />
+      <File FileName="Pong_Plus/MDTBCollisionSystem/Entity.cs" Line="76" Column="1" />
+      <File FileName="Pong_Plus/MDTBCollisionSystem/Collision.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Pong" expanded="True">
+            <Node name="Pong_Plus" expanded="True">
+              <Node name="MDTBCollisionSystem" expanded="True">
+                <Node name="Collision.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Pong__Plus PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
