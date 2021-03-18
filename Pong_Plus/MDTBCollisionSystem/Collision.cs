@@ -67,7 +67,8 @@ namespace MDTBCollisionSystem
     }
 
     /// <summary>
-    /// A Spatial Hash implementation which is used for camera checks as well as internal collision checks.
+    /// A Spatial Hash implementation which is used for internal collision checks.
+    /// Also might be used for camera? idek lol
     /// </summary>
     public class SpatialHash
     {
@@ -78,6 +79,8 @@ namespace MDTBCollisionSystem
         private int hzcells;
         public List<Entity> dynamicEntities;
         public List<Entity> staticEntities;
+        private SpatialHash staticState;
+        private bool unsaved = true;
 
         public SpatialHash(int height, int width, int vertical, int horizontal)
         {
@@ -114,17 +117,88 @@ namespace MDTBCollisionSystem
             return found;
         }
 
-        public void addDynamicEntity(Entity entity)
+        /// <summary>
+        /// Saves all current static entities and saves them to a default object.
+        /// Used for quicker reloading to prevent you having to re-add all the static entities one by one during collision updates.
+        /// Only saves static entities like tiles that don't move; doesn't save dynamic entities
+        /// </summary>
+        public void saveStaticDefault()
         {
-            foreach(int hash in getHash(entity.)
+            SpatialHash temp = new SpatialHash(this.height, this.width, this.vtcells, this.hzcells);
+            foreach (StaticEntity ent in this.staticEntities) // A bit cumbersome, but seems okay for now
+            {
+                temp.addEntity(ent);
+            }
+                this.staticState = temp;
+            this.unsaved = false;
         }
 
+        public int addEntity(DynamicEntity entity)
+        {
+            List<Entity> cellData;
+            foreach (int hash in cellKeys(entity.tlCorner,entity.brCorner))
+            {
+                if (!contents.ContainsKey(hash))
+                {
+                    cellData = new List<Entity>();
+                }
+                else
+                {
+                    cellData = (List<Entity>)contents[hash];
+                }
+                cellData.Add(entity);
+                dynamicEntities.Add(entity);
+                contents.Add(hash, cellData);
+            }
+            return dynamicEntities.Count - 1;
+        }
+        public int addEntity(StaticEntity entity)
+        {
+            List<Entity> cellData;
+            foreach (int hash in cellKeys(entity.tlCorner, entity.brCorner))
+            {
+                if (!contents.ContainsKey(hash))
+                {
+                    cellData = new List<Entity>();
+                }
+                else
+                {
+                    cellData = (List<Entity>)contents[hash];
+                }
+                cellData.Add(entity);
+                staticEntities.Add(entity);
+                contents.Add(hash, cellData);
+            }
+            this.unsaved = true;
+            return staticEntities.Count - 1;
+        }
 
+        /// <summary>
+        /// Resets the board, clearing it of all dynamic objects.
+        /// This is largely in preparation for readding dynamic objects in collision checks.
+        /// </summary>
+        public void clear()
+        {
+            this.contents = this.staticState.contents;
+            this.dynamicEntities = new List<Entity>();
+            if (this.unsaved)
+            {
+                this.saveStaticDefault();
+            }
+        }
 
+        public List<Entity> overlapsFor(int entityIndex)
+        {
 
-
-
-
+        }
         
+
+
+
+
+
+
+
+
     }
 }
