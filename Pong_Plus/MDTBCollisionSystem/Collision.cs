@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
 
+
 namespace MDTBCollisionSystem
 {
     public struct BoundingBox2D
@@ -80,6 +81,7 @@ namespace MDTBCollisionSystem
         public List<Entity> dynamicEntities;
         public List<Entity> staticEntities;
         private SpatialHash staticState;
+
         private bool unsaved = true;
 
         public SpatialHash(int height, int width, int vertical, int horizontal)

@@ -8,7 +8,6 @@ namespace Pong_Plus
     public class Game1 : Game
     {
         Texture2D ballTexture;
-        ballTexture.
         Vector2 ballPos;
         float ballSpd;
         BoundingBox2D ballBoundingBox;

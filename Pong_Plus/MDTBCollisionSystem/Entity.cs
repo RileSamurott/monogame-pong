@@ -1,12 +1,13 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 namespace MDTBCollisionSystem
 {
     public abstract class Entity
     {
         public Vector2 position;
         protected BoundingBox2D boundingbox;
-        public string spriteName;
+        public Texture2D sprite;
         protected bool immobile;
 
         public Vector2 tlCorner
