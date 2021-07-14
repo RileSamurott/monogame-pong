@@ -4,9 +4,27 @@
   <Platform>DesktopGL</Platform>
   <Config />
   <SourceFiles>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/AllySprites/Char1.png</File>
     <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/Ball.png</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/battlegfx.png</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/ceruspr.png</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/dialogBG.png</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/File.spritefont</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/menus.png</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/scrollingctr.png</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/System.png</File>
+    <File>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/tile.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

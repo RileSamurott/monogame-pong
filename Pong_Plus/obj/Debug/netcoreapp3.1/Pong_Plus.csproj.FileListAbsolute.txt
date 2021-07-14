@@ -21,3 +21,14 @@
 /Users/mewtwoswift/Projects/Pong/Pong_Plus/obj/Debug/netcoreapp3.1/Pong_Plus.pdb
 /Users/mewtwoswift/Projects/Pong/Pong_Plus/obj/Debug/netcoreapp3.1/Pong_Plus.genruntimeconfig.cache
 /Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Content/Ball.xnb
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Content/tile.xnb
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Content/System.xnb
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Content/AllySprites/Char1.xnb
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/mewtwoswift/Projects/Pong/Pong_Plus/bin/Debug/netcoreapp3.1/System.Diagnostics.DiagnosticSource.dll

@@ -1,2 +1,11 @@
 Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/AllySprites/Char1.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/AllySprites/Char1.xnb","TextureProcessor","Texture2DContent",276,3157,0.215262
 "/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/Ball.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/Ball.xnb","TextureProcessor","Texture2DContent",4443,291685,0.225252
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/battlegfx.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/battlegfx.xnb","TextureProcessor","Texture2DContent",447,8185,0.728142
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/ceruspr.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/ceruspr.xnb","TextureProcessor","Texture2DContent",261,1685,0.284199
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/dialogBG.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/dialogBG.xnb","TextureProcessor","Texture2DContent",150,985,0.223336
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/File.spritefont","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/Arial.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21538,0.260057
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/menus.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/menus.xnb","TextureProcessor","Texture2DContent",345,2485,0.186632
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/scrollingctr.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/scrollingctr.xnb","TextureProcessor","Texture2DContent",1185,11845,0.199818
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/System.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/System.xnb","TextureProcessor","Texture2DContent",1293,32485,0.217324
+"/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/tile.png","/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/tile.xnb","TextureProcessor","Texture2DContent",2349,129685,0.706306
