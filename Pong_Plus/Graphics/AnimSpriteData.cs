@@ -4,9 +4,14 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace Needler.Graphics
 {
-    public struct SpriteData
+    public struct AnimSpriteData
     {
+        public int xOffset;
+        public int yOffset;
+        public int xLimit;
+        public int yLimit;
         public int height;
         public int width;
+        
     }
 }
