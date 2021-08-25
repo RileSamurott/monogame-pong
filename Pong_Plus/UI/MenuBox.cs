@@ -23,7 +23,7 @@ namespace Needler.UI
         public int width;
         public int x;
         public int y;
-        public bool hidden = true;
+        public bool hidden = false;
 
 
 
@@ -49,7 +49,7 @@ namespace Needler.UI
             this.y = y;
         }
 
-        public void Draw(SpriteBatch spritebatch, Vector2 position, float scale)
+        public void Draw(SpriteBatch spritebatch, Vector2 position, float scale) // TODO: Redundant position parameter, need to remove
         {
             if (hidden)
             {

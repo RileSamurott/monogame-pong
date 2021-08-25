@@ -15,10 +15,9 @@ namespace Needler.UI
         Paused = 3,
         Finish = 4
     }
-    public class DialogBox: InteractableUIElement
+    public class DialogBox: InteractableUIElement, MenuAction
     {
         public static Texture2D menus;
-        public static SpriteFont font;
         private MenuBox mbox;
         private double updateTime;
         private const double updateSpeed = 0.02f;
@@ -30,13 +29,9 @@ namespace Needler.UI
         public string text;
         private int writeUpTo;
         public bool hidden = true;
+        public MenuManager caller;
+        private bool autoclose;
 
-
-
-        public static void initialize(SpriteFont sprfnt)
-        {
-            font = sprfnt;
-        }
         public DialogBox(int x, int y, int width, int height)
         {
             this.height = height;
@@ -47,51 +42,66 @@ namespace Needler.UI
             text = "";
             writeUpTo = 0;
             this.state = dialogState.Paused;
+            this.autoclose = false;
         }
+
+        public DialogBox(int x, int y, int width, int height, bool autoclose)
+        {
+            this.height = height;
+            this.width = width;
+            this.x = x;
+            this.y = y;
+            this.mbox = new MenuBox(x, y, width, height);
+            text = "";
+            writeUpTo = 0;
+            this.state = dialogState.Paused;
+            this.autoclose = autoclose;
+        }
+
         public void Update(GameTime gametime, KeyboardState kbstate)
         {
             if (state == dialogState.Printing)
             {
                 updateTime -= gametime.ElapsedGameTime.TotalSeconds;
-                if (updateTime <= 0)
-                {
-                    writeUpTo++;
-                    if (text[writeUpTo-1] == ' ') { writeUpTo++; }
-                    updateTime = updateSpeed;
-                }
                 if (writeUpTo >= text.Length)
                 {
                     state = dialogState.AwaitingProceed;
                 }
+                else if (updateTime <= 0)
+                {
+                    if (text[writeUpTo] == ' ') { writeUpTo++; }
+                    writeUpTo++;
+                    updateTime = updateSpeed;
+                }
             }
             ProcessInputs(kbstate);
         }
+
         public void ProcessInputs(KeyboardState kbstate)
         {
             if (KeyboardManager.HasBeenPressed(Keys.C))
             {
-                if (state == dialogState.Printing || state == dialogState.Paused)
-                {
-                    writeUpTo = text.Length;
-                    state = dialogState.AwaitingProceed;
-                }
-                else if (state == dialogState.AwaitingProceed)
+                if (state == dialogState.AwaitingProceed)
                 {
                     text = "";
                     writeUpTo = 0;
                     state = dialogState.Finish;
+                    if (autoclose) caller.closeCurrentMenu();
                 }
             }
         }
+
         public void Write(string text)
         {
             if (state != dialogState.Printing)
             {
+                Console.Out.WriteLine("Starting Printing Process!");
                 this.text = text;
                 this.writeUpTo = 0;
                 this.state = dialogState.Printing;
             }
         }
+
         public void Draw(SpriteBatch spritebatch, float scale)
         {
             if (hidden)
@@ -100,8 +110,14 @@ namespace Needler.UI
             }
 
             mbox.Draw(spritebatch, new Vector2(x, y), scale);
+            if (state == dialogState.AwaitingProceed) MenuGeneric.cursor.Draw(spritebatch, new Vector2(x + width - 10, y + height - 10), (float) (Math.PI/2), scale);
+            Needler.systemFont.DrawString(spritebatch, new Vector2(x + 5, y + 5), scale, text.Substring(0, writeUpTo), Color.Black);
+        }
 
-            spritebatch.DrawString(font, text.Substring(0, writeUpTo), new Vector2(x + 5, y + 5), Color.Black);
+        public virtual void menuExecute(MenuManager menumgr)
+        {
+            menumgr.cActiveMenus.Push(this);
+            this.caller = menumgr;
         }
     }
 }

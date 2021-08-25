@@ -101,8 +101,8 @@ namespace Needler.UI
             string dgts = number.ToString();
             for (int i = 0; i < dgts.Length; i++)
             {
-                nums.xOffset = (int)(digits[dgts[i]] * 9);
-                nums.Draw(spritebatch, position + new Vector2(i * 9 * scale, 0) + new Vector2(-xOffset*4.5f*scale, 0), scale);
+                nums.xOffset = digits[dgts[i]] * 9;
+                nums.Draw(spritebatch, position + new Vector2((2 * i - dgts.Length) * 4 * scale, 0), scale);
             }
         }
     }

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <SourceFile>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/cursor.png</SourceFile>
-  <SourceTime>2021-07-14T17:26:58.2579712-04:00</SourceTime>
-  <DestFile>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/cursor.xnb</DestFile>
-  <DestTime>2021-07-14T17:42:39.9501671-04:00</DestTime>
+  <SourceFile>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/AllySprites/ceruspr.png</SourceFile>
+  <SourceTime>2021-07-04T10:12:26.5001176-04:00</SourceTime>
+  <DestFile>/Users/mewtwoswift/Projects/Pong/Pong_Plus/Content/bin/DesktopGL/Content/AllySprites/ceruspr.xnb</DestFile>
+  <DestTime>2021-08-11T12:31:31.1720112-04:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2020-08-10T16:17:54-04:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
